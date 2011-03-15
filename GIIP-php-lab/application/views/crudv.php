@@ -10,9 +10,12 @@
 	</head>
 <body>
 	<h2>Create</h2>
-		<?php echo form_open('site/create');?>
+		<?php echo form_open('crudc/create');?>
 	<p><label for="title">Title:</label>
 		<input type="text" name="title" id="title" /></p>
+		
+	<p><label for="content">Author:</label>
+		<input type="text" name="author" id="author" /></p>	
 		
 	<p><label for="content">Content:</label>
 		<input type="text" name="content" id="content" /></p>
@@ -24,20 +27,19 @@
 
 		<h2>Read</h2>
 		<?php if(isset($records)) : foreach($records as $row) : ?>
-		<h2><?php echo anchor("site/delete/$row->id", $row->title); ?> </h2>
-		<div><?php echo $row->content; ?></div>
-
+		<? echo 'title' , 'author'; ?>
 			<?php endforeach; ?>
 
 		<?php else : ?>
 
-		<h2>Currently no records in the archive.</h2>
+		<h2>There are no records avaliable at this time.</h2>
 
 		<?php endif; ?>
 <hr />
 
 		<h2>Delete</h2>
-<p>To use the delete function click on a link!</p>
+	
+		<p>To use the delete function click on a link!</p>
 
 </body>
 </html> 

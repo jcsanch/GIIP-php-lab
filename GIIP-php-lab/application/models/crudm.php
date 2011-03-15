@@ -1,6 +1,6 @@
 <?php
 
-class Site_model extends Model {
+class crudm extends Model {
 
 function get_records()
 {
